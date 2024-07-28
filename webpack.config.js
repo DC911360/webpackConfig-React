@@ -1,17 +1,15 @@
+const path = require('path')
 const EslintWebpackPlugin = require('eslint-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-// const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
-const path = require('path')
 const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
 
 //进程的环境变量 process.env.NODE_ENV 获取 cross-env 定义的环境变量
 const isProduction = process.env.NODE_ENV === 'production' ? true : false
-// console.log("isProduction=>", isProduction)
 
 //返回样式处理 loader 函数
 const getStyleLoaders = (pre) => {
@@ -19,8 +17,6 @@ const getStyleLoaders = (pre) => {
         isProduction ? MiniCssExtractPlugin.loader : 'style-loader',
         'css-loader',
         {
-            //处理css 兼容性   
-            //需要 package.json 中 browserslist 来处理兼容性
             loader: 'postcss-loader',
             options: {
                 postcssOptions: {
