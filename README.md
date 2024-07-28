@@ -13,7 +13,7 @@ $ npm run build
 ```
 
 ```
-webpackConfig-React
+webpackConfig-React project-tree
 ├─ .eslintignore          //使用 vscode 插件:eslint ,忽略检查文件配置
 ├─ .gitignore
 ├─ .eslintrc.js           //webpack plugin: eslint 配置
@@ -62,3 +62,14 @@ webpackConfig-React
 └─ webpack.pro.js
 
 ```
+### webpack.config.js
+- entry   //入口文件
+- output  //出口文件
+- module  //loader 加载器
+- plugins //plugin 插件
+- mode    // 开发/生产模式
+- devtool // sourceMap
+- optimization // 优化，分割
+- devServer   // 开发服务
+- resolve     // 自动补全 文件扩展名
+- performance // 关闭性能分析，提高打包速度
