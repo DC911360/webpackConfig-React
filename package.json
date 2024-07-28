@@ -1,5 +1,5 @@
 {
-  "name": "webpack-react",
+  "name": "webpack-config-react",
   "version": "1.0.0",
   "main": "weboack.dev.js",
   "scripts": {
