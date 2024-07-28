@@ -172,7 +172,7 @@ module.exports = {
         ],
     },
     plugins: [
-        // new NodePolyfillPlugin(),
+
         new EslintWebpackPlugin({
             context: path.resolve(__dirname, '../src'), // 处理文件的路径
             exclude: "node_modules", // 排除文件不进行处理
@@ -186,13 +186,11 @@ module.exports = {
             template: path.resolve(__dirname, './public/index.html')
         }),
 
-        // //开发环境下 React 热更新 // 激活 JS    HMR
-        // new ReactRefreshWebpackPlugin({}),
-
         isProduction && new MiniCssExtractPlugin({
             filename: "static/css/[name].[contenthash:10].css",
             chunkFilename: "static/css/[name].[contenthash:10].chunk.css",
         }),
+
         // CopyPlugin 复制 public 中的资源 到 dist 文件
         isProduction && new CopyPlugin({
             patterns: [
